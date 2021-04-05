@@ -1,8 +1,10 @@
 1. Search for the occurrences of "foo" and "welcome" in a directory AND print
 the surrounding lines i.e., print n lines before and after the match and APPEND
 it in a new file. Please ensure no errors are logged into the new file.
+
 2. Find the number of cpu cores on a given Linux(rpm/debian based distro)
 machine without using any external package. Use native utilities only.
+
 3. Git related
 3.1 Create a local git repository called as micro-service
 3.2 Track an empty directory named module1 in it and commit.
@@ -11,13 +13,22 @@ directory called as libs like below
 libs/k8s => kubernetes/kubernetes
 libs/tests => git@github.com:Netflix/chaosmonkey.git
 3.4 Ignore all files with the extension ".swp" anywhere in the repository.
-Symbl.ai- Strictly Private & Confidential 1
-Rammer AI LLP (Symbl.ai)
+
+
+
 4. Can you print the PIDs of the zombie and their parent processes ? If yes,
 how ? If not, why?
+
+ps -eaf|grep zombie
+
 5. Write a simple ansible/python script that tries to ssh to a machine (without
 password) and gets
 1. the uptime of the machine
+ansible all -m apt -a 'name=apache2 state=present update-cache=yes'
 2. Number of hidden files in the home directory
+ansible all -m shell -a 'ls -lart'
 3. Number of logged in users
+ansible all -m user -a 'ls -lrt'
+
 4. Deletes everything under tmp and the list of deleted files.
+ansible all -m shell -a 'rm -f /tmp  ls -lrt'
