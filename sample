@@ -4,6 +4,8 @@ it in a new file. Please ensure no errors are logged into the new file.
 
 2. Find the number of cpu cores on a given Linux(rpm/debian based distro)
 machine without using any external package. Use native utilities only.
+cd /sys/devices/system/cpu
+ls -l
 
 3. Git related
 3.1 Create a local git repository called as micro-service
